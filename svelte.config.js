@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 
 export default {
@@ -10,8 +10,13 @@ export default {
   }),
   kit: {
     adapter: adapter({
-      // 옵션은 필요에 따라 지정 가능, 기본 설정이면 그냥 adapter()만 써도 됨
-      out: 'build'  // 빌드 폴더 이름
-    })
+      // 빌드 결과물이 public이 아닌 'build' 폴더에 생성되도록 설정
+      pages: 'build',
+      assets: 'build',
+      fallback: null
+    }),
+    prerender: {
+      default: true  // 모든 페이지를 빌드시 미리 렌더링
+    }
   }
 };
