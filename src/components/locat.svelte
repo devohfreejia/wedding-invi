@@ -1,37 +1,38 @@
+<script context="module" lang="ts">
+  export const ssr = false; // 반드시 클라이언트 전용
+</script>
+
 <script lang="ts">
-	import { onMount } from 'svelte';
+  import { onMount } from 'svelte';
 
-	onMount(() => {
-		const script = document.createElement('script');
-		script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=c2f4150ab2151cceffcbf8e3fd1e3b57&autoload=false';
-		script.onload = () => {
-			const kakao = (window as any).kakao;
-			kakao.maps.load(() => {
-				const container = document.getElementById('map');
-				const options = {
-					center: new kakao.maps.LatLng(35.84769859989874, 128.6256593486731),
-					level: 3,
-				};
+  onMount(() => {
+    const container = document.getElementById('map');
+    if (!container) return;
 
-				const map = new kakao.maps.Map(container, options);
+    const script = document.createElement('script');
+    script.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=c2f4150ab2151cceffcbf8e3fd1e3b57&autoload=false';
+    script.onload = () => {
+      const kakao = (window as any).kakao;
+      kakao.maps.load(() => {
+        const options = {
+          center: new kakao.maps.LatLng(35.84769859989874, 128.6256593486731),
+          level: 3,
+        };
 
-				const markerPosition = new kakao.maps.LatLng(35.84769859989874, 128.6256593486731);
-				const marker = new kakao.maps.Marker({ position: markerPosition });
-				marker.setMap(map);
+        const map = new kakao.maps.Map(container, options);
 
-				const infowindow = new kakao.maps.InfoWindow({
-					content: `<div style="padding:5px; font-size:13px;">아현정 웨딩홀</div>`,
-				});
-				
+        const marker = new kakao.maps.Marker({
+          position: new kakao.maps.LatLng(35.84769859989874, 128.6256593486731),
+        });
+        marker.setMap(map);
 
-				kakao.maps.event.addListener(marker, 'click', () => {
-					const url = 'https://map.kakao.com/?urlX=866017&urlY=653792&urlLevel=5&map_type=TYPE_MAP&map_hybrid=false'; // 여기에 원하는 외부 사이트 URL
-					window.open(url, '_blank'); // _blank → 새 탭(새 창)에서 열림
-				});
-			});
-		};
-		document.head.appendChild(script);
-	});
+        kakao.maps.event.addListener(marker, 'click', () => {
+          window.open('https://map.kakao.com/?urlX=866017&urlY=653792&urlLevel=5&map_type=TYPE_MAP&map_hybrid=false', '_blank');
+        });
+      });
+    };
+    document.head.appendChild(script);
+  });
 </script>
 
 <div class="map-wrapper kr">

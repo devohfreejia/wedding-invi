@@ -10,7 +10,7 @@
 	import Location from '../components/locat.svelte';
 	import Footer from '../components/footer.svelte';
 	import { onMount } from "svelte";
-	import music from '../lib/assets/harunohi.mp3'; // mp3를 import
+	import music from '../lib/assets/harunohi.mp3';
 
 	let audio;
 	let started = false;
@@ -23,23 +23,18 @@
 		audio.play().catch(err => console.log("재생 실패:", err));
 		started = true;
 	};
+
+	onMount(() => {
+		const tryPlay = () => {
+			startMusic();
+			// 이벤트는 한 번만 실행되도록 제거
+			document.removeEventListener('click', tryPlay);
+		};
+
+		// 화면 어디 클릭해도 실행
+		document.addEventListener('click', tryPlay, { once: true });
+	});
 </script>
-
-<style>
-  .touch-area {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    cursor: pointer;
-  }
-</style>
-
-<div class="touch-area" on:click={startMusic}>
-  <p style="text-align:center; margin-top:50vh; font-size:1.2rem;">
-  </p>
-</div>
 
 <Cover />
 <Letter />

@@ -1,5 +1,5 @@
 import type { Actions } from './$types';
-import { Resend } from 'resend';
+// import { Resend } from 'resend';
 import { env } from '$env/dynamic/private';
 import { fail } from '@sveltejs/kit';
 

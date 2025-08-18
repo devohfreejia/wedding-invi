@@ -1,18 +1,17 @@
-import adapter from '@sveltejs/adapter-cloudflare';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from '@sveltejs/adapter-node';
+import preprocess from 'svelte-preprocess';
 
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	// Consult https://svelte.dev/docs/kit/integrations
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
-
-	kit: {
-		// adapter-auto only supports some environments, see https://svelte.dev/docs/kit/adapter-auto for a list.
-		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
-		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
-		adapter: adapter()
-	}
+export default {
+  preprocess: preprocess({
+    scss: {
+      prependData: `@import 'src/styles/variables.scss';`
+    },
+    postcss: true
+  }),
+  kit: {
+    adapter: adapter({
+      // 옵션은 필요에 따라 지정 가능, 기본 설정이면 그냥 adapter()만 써도 됨
+      out: 'build'  // 빌드 폴더 이름
+    })
+  }
 };
-
-export default config;
