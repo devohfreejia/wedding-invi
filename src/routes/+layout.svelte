@@ -31,8 +31,8 @@
 	/>
 	<meta property="og:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
 	<meta property="og:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
-	<meta property="og:image" content="https://emily-marries-anthony.com/preview.jpg" />
-	<meta property="og:url" content="https://emily-marries-anthony.com/" />
+	<meta property="og:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
+	<meta property="og:url" content="https://wedding-invi-delta.vercel.app/" />
 	<meta property="og:type" content="website" />
 </svelte:head>
 
