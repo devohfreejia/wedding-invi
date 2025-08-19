@@ -1,26 +1,38 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/clover.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/clover.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- 고정 OG 메타 태그 추가 -->
-		<meta property="og:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
-		<meta property="og:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
-		<meta property="og:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
-		<meta property="og:url" content="https://wedding-invi-delta.vercel.app/" />
-		<meta property="og:type" content="website" />
+    %sveltekit.head%
 
-		<!-- optional: Twitter -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
-		<meta name="twitter:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
-		<meta name="twitter:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
+    <!-- OG / SNS 미리보기 -->
+    <meta property="og:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
+    <meta property="og:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
+    <meta property="og:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
+    <meta property="og:url" content="https://wedding-invi-delta.vercel.app/" />
+    <meta property="og:type" content="website" />
 
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+    <!-- optional: Twitter 카드 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
+    <meta name="twitter:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
+    <meta name="twitter:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
+
+    <!-- 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif+KR:wght@200..900&family=Sacramento&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    />
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>
