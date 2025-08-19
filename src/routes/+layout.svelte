@@ -23,7 +23,7 @@
 
 <svelte:head>
   <!-- 기본 title -->
-  <title>{title}</title>
+  <title>원진 ♥ 지아의 결혼식에 초대합니다</title>
 
   <!-- 웹폰트 -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
