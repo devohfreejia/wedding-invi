@@ -40,15 +40,15 @@
   <!-- OG / SNS 미리보기 -->
   <meta property="og:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
   <meta property="og:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
-  <meta property="og:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
-  <meta property="og:url" content="https://wedding-invi-delta.vercel.app/" />
+  <meta property="og:image" content="https://wedding-invi-delta.vercel.app/preview_img_01.jpg" />
+  <meta property="og:url" content="https://wedding-invi-delta.vercel.app" />
   <meta property="og:type" content="website" />
 
   <!-- optional: Twitter 카드 -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="원진 ♥ 지아의 결혼식에 초대합니다" />
   <meta name="twitter:description" content="2025년 11월 16일 함께 달릴 준비 완료💨" />
-  <meta name="twitter:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg" />
+  <meta name="twitter:image" content="https://wedding-invi-delta.vercel.app/preview_img.jpg_01" />
 </svelte:head>
 
 {#if localeLoaded}
