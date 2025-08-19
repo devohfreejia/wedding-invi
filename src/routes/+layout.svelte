@@ -8,7 +8,7 @@
   let { children } = $props();
 
   // locale 로딩 상태 확인
-  let localeLoaded = $derived(!localeStore.isLoading && localeStore.locale);
+  let localeLoaded = $derived(!localeStore.isLoading && localeStore.locale);  
 
   // 클라이언트용 title (선택적)
   let title = "원진 ♥ 지아의 결혼식에 초대합니다";
