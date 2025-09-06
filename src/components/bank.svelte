@@ -2,15 +2,15 @@
 	import { localeStore } from '../i18n.svelte';
 
 	let groomAccount = {
-		name: "김원진",
-		bank: "카카오뱅크",
-		number: "3333-00-1234567"
+		name: "김재수",
+		bank: "기업은행",
+		number: "362-065637-01-010"
 	};
 
 	let brideAccount = {
-		name: "우지아",
-		bank: "국민은행",
-		number: "967201-01-392448"
+		name: "최은숙",
+		bank: "대구은행",
+		number: "033-13-093796"
 	};
 
 	let showToast = false;
