@@ -40,13 +40,13 @@
 	<h2 class="section-title">마음 전하실 곳</h2>
 
 	<div class="account kr">
-		<p><strong>김재수</strong></p>
+		<p><strong>우종섭</strong></p>
 		<p>{groomAccount.bank} {groomAccount.number}</p>
 		<button on:click={() => copyToClipboard(groomAccount.number)}>복사하기</button>
 	</div>
 
 	<div class="account kr">
-		<p><strong>최은숙</strong></p>
+		<p><strong>유혜숙</strong></p>
 		<p>{brideAccount.bank} {brideAccount.number}</p>
 		<button on:click={() => copyToClipboard(brideAccount.number)}>복사하기</button>
 	</div>
