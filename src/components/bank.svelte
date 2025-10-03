@@ -3,14 +3,14 @@
 
 	let groomAccount = {
 		name: "",
-		bank: "기업은행",
-		number: "362-065637-01-010"
+		bank: "국민은행",
+		number: "709802-01-021958"
 	};
 
 	let brideAccount = {
 		name: "",
-		bank: "대구은행",
-		number: "033-13-093796"
+		bank: "농협은행",
+		number: "307129-51-073859"
 	};
 
 	let showToast = false;
