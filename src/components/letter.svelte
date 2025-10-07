@@ -30,8 +30,12 @@
 		{:else}
 			<div class="family-description kr">
 				<p>
-					함준수<span class="name-divider">{@html nameDivider}</span> 염다혜<span class="daughter"
-						>의 친구</span>우지아
+					김재수<span class="name-divider">{@html nameDivider}</span> 최은숙
+					<span class="son">의 아들</span>김원진
+				</p>
+				<p>
+					우종섭<span class="name-divider">{@html nameDivider}</span> 유혜숙<span class="daughter"
+						>의 딸</span>우지아
 				</p>
 			</div>
 		{/if}
